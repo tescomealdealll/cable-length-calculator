@@ -1,5 +1,7 @@
 # Cable Length Calculator
 
+[![Glitch](https://img.shields.io/badge/glitch-%233333FF.svg?style=for-the-badge&logo=glitch&logoColor=white)](https://bottlenose-roomy-soldier.glitch.me/)
+
 This is a length calculator for people who want to make their own coiled cables and have a hard time getting the length right.
 I havent really had much oppertunity to test this but from the one cable I did that had an 8inch coil, it was spot on.
 

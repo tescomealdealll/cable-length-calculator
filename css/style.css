@@ -1,0 +1,77 @@
+
+:root {
+    --black: #131313;
+    --blurple: #5539cc;
+    --white: #f3f4f5;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: monospace;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.header {
+    width: 100%;
+    background-color: var(--ligher-eerie-black);
+    padding: 20px;
+    text-align: center;
+}
+
+.container form {
+    padding-bottom: 20px;
+    grid-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container input, select {
+    color: var(--white);
+    background-color: transparent;
+    border-radius: 10px;
+    width: 200px;
+    height: 30px;
+    border: none;
+    text-align: center;
+    text-indent: 10px;
+    outline: none;
+    border-bottom: 1px solid rgba(243, 244, 245, 0.5);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.container input[type="text"]:focus {
+    border-color: var(--white);
+    transition: .3s;
+}
+
+#submit_button {
+    border-radius: 10px;
+    width: 200px;
+    height: 30px;
+    border: none;
+    text-align: center;
+    text-indent: 10px;
+    outline: none;
+    color: var(--blurple);
+    border-style: solid;
+    border-width: thin;
+    border-color: var(--blurple);
+    transition-timing-function: ease-in-out;
+}
+
+#submit_button:hover {
+    background-color: var(--blurple);
+    border: none;
+    color: var(--white);
+    transition: .2s;
+}

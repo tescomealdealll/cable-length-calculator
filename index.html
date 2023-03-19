@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Cable Length Calculator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/style.css">
+        <script async defer src="./js/index.js"></script>
+    </head>
+    <body>
+
+        <div class="container">
+
+            <form>
+
+                <input
+                    title="The diameter of your dowel that you are using for coiling, in millimeters"
+                    type="text"
+                    placeholder="Dowel Diameter (mm)"
+                    id="dowel_diameter"
+                    value="12.7"
+                >
+
+                <input 
+                    title="The length that you want your coil to be in inches"
+                    type="text"
+                    placeholder="Coil Length (inches)"
+                    id="coil_length"
+                    value=""
+                >
+                <input 
+                    title="The diameter of your cable once sleeveed, in centimeters"
+                    type="text"
+                    placeholder="Cable Diameter (mm)"
+                    id="cable_diameter"
+                    value="5"
+                >
+                <input 
+                    title="The amount of cable you want on either side of the coil for the connectors, please allow a few centimeters extra for the wire stripping"
+                    type="text"
+                    placeholder="Cable Allowance (cm)"
+                    id="cable_allowance"
+                    value="10"
+                >
+                <input 
+                    title="The amount of cable you want after your aviator to go to your PC, in centimeters"
+                    type="text"
+                    placeholder="Device Length (cm)"
+                    id="device_length"
+                    value="150"
+                >
+
+                <input id="submit_button" type="submit">
+
+            </form>
+
+            <p id="length_result_text"></p>
+
+        </div>
+
+
+    </body>
+</html>

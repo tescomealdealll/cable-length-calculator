@@ -16,7 +16,6 @@ function calculator(event) {
     const coilLengthElement = document.getElementById('coil_length');
     const cableDiameterElement = document.getElementById('cable_diameter');
     const cableAllowanceElement = document.getElementById('cable_allowance');
-    const cableDeviceLength = document.getElementById('device_length');
 
     if (!dowelDiameterElement.value) {
         return alert(`Input ${dowelDiameterElement.id} is None`);
@@ -30,15 +29,11 @@ function calculator(event) {
     else if (!cableAllowanceElement.value) {
         return alert(`Input ${cableAllowanceElement.id} is None`);
     } 
-    else if (!cableDeviceLength.value) {
-        return alert(`Input ${cableDeviceLength.id} is None`);
-    }
 
     const dowelDiameterVal = parseFloat(dowelDiameterElement.value);
     const coilLength = (parseFloat(coilLengthElement.value) * 2.54);
     const cableDiameter = parseFloat(cableDiameterElement.value / 10);
     const cableAllowance = parseFloat(cableAllowanceElement.value); 
-    const deviceLength = parseFloat(cableDeviceLength.value);
 
     if (dowelDiameterVal == NaN || coilLength == NaN || cableDiameter == NaN || cableAllowance == NaN) {
         return alert('One or more values submitted are not an integer or float')
@@ -46,10 +41,11 @@ function calculator(event) {
 
     const dowelDiameter = (dowelDiameterVal + cableDiameter) / 10;
     const coilLengthValue = coilLengthCalculator(dowelDiameter, coilLength, cableDiameter, cableAllowance);
-    const totalLenth = coilLengthValue + deviceLength;
 
     const lengthResultText = document.getElementById('length_result_text');
-    lengthResultText.innerHTML = `You should use ${Math.round(coilLengthValue)}cm of ${cableDiameterElement.value}mm diameter cable for your ${coilLengthElement.value}inch coil. This includes ${cableAllowance}cm either end of the coil. The total length of your cable will be ${Math.round(totalLenth)}cm`;
+    // lengthResultText.innerHTML = `You should use ${Math.round(coilLengthValue)}cm of ${cableDiameterElement.value}mm diameter cable for your ${coilLengthElement.value}inch coil. This includes ${cableAllowance}cm either end of the coil.`;
+    lengthResultText.innerHTML = `You should use ${Math.round(coilLengthValue)}cm of cable to make your ${coilLengthElement.value}inch coil. This includes ${cableAllowance}cm allowance either end of the coil.`;
+    
 
 }
 

@@ -27,3 +27,9 @@ Dates are formatted as DD-MM-YYYY
 ### Changed
 
 - Changed font to SF UI Text
+
+## [1.2.0] - 25-03.2023
+
+### Removed
+
+- Removed the Device Length input
